@@ -4,15 +4,28 @@
   box-sizing: border-box;
 }
 
-.grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  border: solid 2px rgb(206, 83, 83);
+body {
+  height: 100%;
 }
 
-.grid {
+.grid-container {
+  /* background-color: antiquewhite; */
+  max-width: 1000px;
+  /* margin: 0 auto; */
+  max-height: 1000px;
+  border: solid 1px rgb(83, 206, 130);
+}
+
+.grid-row {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* border: solid 1px rgb(206, 83, 83); */
+}
+
+.grid-col-box {
+  /* background-color: aquamarine; */
   height: 50px;
   width: 50px;
-  /* display: flex; */
+  flex: 1 0 auto;
   border: solid 1px rgb(0, 0, 0);
 }
