@@ -1,22 +1,18 @@
-const gridContainer = document.getElementById("grid-container")
+const gridContain = document.getElementById("gridContainer");
 
 
+    for (let rowIndex=0; rowIndex<16; rowIndex++){
+    const newRow = document.createElement("div");
+    newRow.classList.add("grid-row");
 
-
-    for (let i=0; i<16; i++){
-    const row = document.createElement("div");
-    row.classList.add("grid");
-
-
-        for(let j=0; j<16; j++){
-        const col = document.createElement("div");
-        col.classList.add("grid");
-
-        row.appendChild(col);
+        for(let columnIndex=0; columnIndex<16; columnIndex++){
+        const newCol = document.createElement("div");
+        newCol.classList.add("grid-col-box");
+        newRow.appendChild(newCol);
 
     }   
 
-        gridContainer.appendChild(row);
+        gridContain.appendChild(newRow);
 }
 
 
