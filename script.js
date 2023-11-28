@@ -1,11 +1,18 @@
+// Get the grid container element by its ID
 const gridContain = document.getElementById("gridContainer");
-let gridSize = 25;
+//initial gridSize
+let gridSize = 30;
+
+
+
+
 
 // Function to change the grid size
 function changeGgridSize(newSize){
+        gridContain.textContent = "";
         gridSize = newSize
         createGrid();
-}
+};
 
 // Function to create the grid based on the current gridSize
 function createGrid(){
@@ -26,7 +33,11 @@ function createGrid(){
         
         // Add event listener for the hover/change color effect
         newCol.addEventListener("mouseover", function(){
-            newCol.style.backgroundColor = "black";
+
+            let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            newCol.style.backgroundColor = "#" + randomColor;
+            
+            // newCol.style.backgroundColor = "black";
 
         });
         // Append the grid box to the current row
@@ -37,6 +48,6 @@ function createGrid(){
         gridContain.appendChild(newRow);
     }
 
-}
-    
-    createGrid();
+};
+
+createGrid();
