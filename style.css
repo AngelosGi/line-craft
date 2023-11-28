@@ -12,22 +12,20 @@ body {
 }
 
 .grid-container {
-  max-width: fit-content;
-  max-height: fit-content;
+  max-width: 70vw;
+  max-height: 70vw;
   border: solid 1px rgb(83, 206, 130);
   
 }
 
 .grid-row {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* border: solid 1px rgb(206, 83, 83); */
 }
 
 .grid-col-box {
   /* background-color: aquamarine; */
-  height: 5vw;
-  width: 5vw;
+  /* height: 5vw; */
+  /* width: 5vw; */
   flex: 1 0 auto;
   border: solid 1px rgb(0, 0, 0);
 }
