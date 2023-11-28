@@ -4,9 +4,11 @@ const gridContain = document.getElementById("gridContainer");
 let gridSize = 30;
 
 
-document.getElementById("gridSizeButton").onclick = changeGgridSize
+document.getElementById("gridSizeButton").onclick = changeGgridSize;
+// document.getElementById("reset").onclick = 
 
 // document.getElementById("rainbow").onclick = 
+
 
 // Function to change the grid size
 function changeGgridSize(newSize){
@@ -36,6 +38,11 @@ function createGrid(){
         // Add event listener for the hover/change color effect
         newCol.addEventListener("mouseover", function(){
 
+
+            //if (will start from here) mode === BW color black
+            //else mode === rainbow random color
+            
+
             let randomColor = Math.floor(Math.random() * 16777215).toString(16);
             newCol.style.backgroundColor = "#" + randomColor;
             
@@ -53,3 +60,4 @@ function createGrid(){
 };
 
 createGrid();
+
