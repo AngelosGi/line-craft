@@ -1,5 +1,5 @@
 const gridContain = document.getElementById("gridContainer");
-let gridSize = 20;
+let gridSize = 25;
 
 
 // function changeGgridSize(newSize){
@@ -7,7 +7,7 @@ let gridSize = 20;
 //         createGrid();
 // }
 
-
+// Function to create the grid based on the current gridSize
 function createGrid(){
 
     const boxSize = 70/gridSize;
@@ -19,8 +19,13 @@ function createGrid(){
         for(let columnIndex=0; columnIndex<gridSize; columnIndex++){
         const newCol = document.createElement("div");
         newCol.classList.add("grid-col-box");
-        newCol.style.height = `${boxSize}vw`;
+        newCol.style.height = `${boxSize}vw`; // Set the height and width of the grid box based on boxSize
         newCol.style.width = `${boxSize}vw`;
+        
+        newCol.addEventListener("mouseover", function(){
+            newCol.style.backgroundColor = "black";
+
+        });
 
         newRow.appendChild(newCol);
 
