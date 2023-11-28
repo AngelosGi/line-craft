@@ -7,14 +7,25 @@
 body {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
 }
 
+
+/* button style */
+.button-container {
+  padding-top: 5vh;
+}
+
+
+
+/* Grid style */
 .grid-container {
   max-width: 70vw;
   max-height: 70vw;
   border: solid 1px rgb(83, 206, 130);
+  box-shadow: 14px 12px 29px 0px rgba(0,0,0,0.35);
   
 }
 
