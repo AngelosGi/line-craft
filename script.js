@@ -4,11 +4,13 @@ const gridContain = document.getElementById("gridContainer");
 let gridSize = 30;
 
 
+document.getElementById("gridSizeButton").onclick = changeGgridSize
 
-
+// document.getElementById("rainbow").onclick = 
 
 // Function to change the grid size
 function changeGgridSize(newSize){
+        newSize = prompt("Pixels")
         gridContain.textContent = "";
         gridSize = newSize
         createGrid();
