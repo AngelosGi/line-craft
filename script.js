@@ -8,8 +8,8 @@ let mode = "rainbow";
 
 document.getElementById("gridSizeButton").onclick = changeGgridSize;
 document.getElementById("reset").onclick = createGrid;
-// document.getElementById("classic").onclick = setClassicMode;
-// document.getElementById("rainbow").onclick = setRainbowMode;
+document.getElementById("classic").onclick = setClassicMode;
+document.getElementById("rainbow").onclick = setRainbowMode;
 
 
 
@@ -21,19 +21,19 @@ function changeGgridSize(newSize){
         createGrid();
 };
 
-// function setClassicMode(){
-//     mode = "classic";
-// };
+function setClassicMode(){
+    mode = "classic";
+};
 
-// function setRainbowMode(){
-//     mode = "rainbow";
-// };
+function setRainbowMode(){
+    mode = "rainbow";
+};
 
 
 // Function to create the grid based on the current gridSize
 function createGrid(){
     //Calculate the size of each grid box based on the gridSize and deletes previous grid
-    const boxSize = 70/gridSize;
+    const boxSize = 40/gridSize;
     gridContain.textContent = "";
 
     // Loop to create rows
@@ -51,7 +51,7 @@ function createGrid(){
         // Add event listener for the hover/change color effect
         newCol.addEventListener("mouseover", function(){
            
-            if (mode === "clasic") {
+            if (mode === "classic") {
                  newCol.style.backgroundColor = "black";
 
             }else {
